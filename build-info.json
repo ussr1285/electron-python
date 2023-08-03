@@ -1,0 +1,15 @@
+{
+    "buildInfo": {
+        "appName": "testappname",
+        "appSite": "https://ussr1285.github.io/web_test/",
+        "siteDomain": "ussr1285.github.io",
+        "appId": "com.company.teststack",
+        "appVersion": "1.0.0",
+        "appVersionCode": "2",
+        "androidKeystorePath": "test.jks",
+        "androidKeystorePassword": "123456789",
+        "androidAlias": "alias",
+        "androidAliasPassword": "123456789",
+        "onesignalPushId": "Secret"
+    }
+}

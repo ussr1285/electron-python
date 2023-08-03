@@ -1,0 +1,71 @@
+<!--index.html-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <title>input test</title>
+</head>
+
+<body>
+  <fieldset>
+    OS를 선택해주십시오
+    <div>
+      <input type="radio" id="android" name="os" value="android" onclick="selectOs(event)" />
+      <label for="android">android</label>
+    </div>
+    <div>
+      <input type="radio" id="ios" name="os" value="ios" onclick="selectOs(event)" />
+      <label for="ios">ios</label>
+    </div>
+
+
+    앱 정보들을 입력해주십시오.
+    <p>appName: <input id="appName" type="text" /></p>
+    <p>appSite: <input id="appSite" type="text" /></p>
+    <p>siteDomain: <input id="siteDomain" type="text" /></p>
+    <p>appId: <input id="appId" type="text" /></p>
+    <p>appVersion: <input id="appVersion" type="text" /></p>
+
+    <div id="android_info">
+      안드로이드는 추가적인 앱 정보들을 입력해주십시오.
+      <p>appVersionCode: <input id="appVersionCode" type="text" /></p>
+      <p>androidKeystorePath: <input id="androidKeystorePath" type="text" /></p>
+      <p>androidKeystorePassword: <input id="androidKeystorePassword" type="text" /></p>
+      <p>androidAlias: <input id="androidAlias" type="text" /></p>
+      <p>androidAliasPassword: <input id="androidAliasPassword" type="text" /></p>
+      <p>onesignalPushIdp>: <input id="onesignalPushId" type="text" />
+      <p><input type="button" id="btnEd" value="Get Data" /></p>
+    </div>
+  </fieldset>
+
+  <script src="./renderer.js"></script>
+</body>
+
+</html>
+<!--
+  <script>
+    let os = ""
+
+    const selectOs = (event) => {
+      os = event.target.value;
+      console.log("work?")
+      console.log(os)
+    }
+
+    if (os === "android") {
+      document.getElementById("android_info").style.visibility = 'visible';
+    }
+    else if (os === "ios") {
+      document.getElementById("android_info").style.visibility = 'hidden';
+    }
+  </script>
+-->
+
+<!--  
+  name:
+  <input id="name" type="text" />
+-->

@@ -1,0 +1,42 @@
+{
+  "name": "electron-with-python-app",
+  "version": "1.0.0",
+  "description": "Hello World!",
+  "main": "main.js",
+  "author": "Minjae Cho",
+  "devDependencies": {
+    "electron": "^25.4.0",
+    "electron-builder": "^24.6.3"
+  },
+  "scripts": {
+    "start": "electron .",
+    "deploy": "electron-builder --windows nsis:ia32"
+  },
+  "build": {
+    "productName": "test",
+    "appId": "com.electron.hello",
+    "asar": true,
+    "protocols": {
+      "name": "test",
+      "schemes": [
+        "test"
+      ]
+    },
+    "win": {
+      "target": [
+        "zip",
+        "nsis"
+      ],
+      "icon": "./img/icon1024.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "directories": {
+      "buildResources": "./resources/installer/",
+      "output": "./exeResult/",
+      "app": "."
+    }
+  }
+}
