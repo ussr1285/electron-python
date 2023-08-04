@@ -38,5 +38,8 @@
       "output": "./exeResult/",
       "app": "."
     }
+  },
+  "dependencies": {
+    "child_process": "^1.0.2"
   }
 }
